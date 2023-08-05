@@ -16,6 +16,15 @@
   <link rel="stylesheet" href="{{ "custom.css" | relURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
 
+  <a rel="me" href="https://mastodon.social/@dandycat"></a>
+
+  <meta name="theme-color"
+		content="#ffffff"
+		media="(prefers-color-scheme: light)">
+  <meta name="theme-color"
+		content="#202020"
+		media="<prefers-color-scheme: dark)">
+
     {{ if .RSSLink -}}
       <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
       <link href="{{ "podcast.xml" | absURL }}" rel="alternate" type="application/rss+xml" title="Podcast" />
@@ -24,15 +33,6 @@
     {{ end -}}
 
 	<link rel="me" href="https://micro.blog/{{ .Site.Author.username }}" />
-	{{ with .Site.Params.twitter_username }}
-		<link rel="me" href="https://twitter.com/{{ . }}" />
-	{{ end }}
-	{{ with .Site.Params.github_username }}
-		<link rel="me" href="https://github.com/{{ . }}" />
-	{{ end }}
-	{{ with .Site.Params.instagram_username }}
-		<link rel="me" href="https://instagram.com/{{ . }}" />
-	{{ end }}
 	<link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth" />
 	<link rel="token_endpoint" href="https://micro.blog/indieauth/token" />
 	<link rel="micropub" href="https://micro.blog/micropub" />

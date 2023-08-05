@@ -2,27 +2,63 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">{{ .Site.Title }}</a>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-
-      <div class="trigger">
-		{{ range .Site.Menus.main }}
-			{{ if .Page.Params.redirect }}
-				<a class="page-link" href="{{ .Page.Params.redirect }}">{{ .Name }}</a>
-			{{ else }}
-				<a class="page-link" href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
-			{{ end }}
-		{{ end }}
+    <header class="masthead">
+      <a href="/">
+        <div class="title">
+          <div class="dandy-logo">
+            <svg width="100%" height="100%" viewBox="0 0 1000 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                    <g transform="matrix(1,0,0,1,0,-577.353)">
+                        <g id="just-tie" serif:id="just tie" transform="matrix(1,0,0,0.5,0,577.353)">
+                            <rect x="0" y="0" width="1000" height="1000" style="fill:none;"/>
+                            <g id="bow-tie" transform="matrix(2.22184,0,0,4.44367,-612.131,-3257.36)">
+                                <g id="right" transform="matrix(-1,0,0,1,1001.09,0)">
+                                    <g id="right-fill" transform="matrix(6.12323e-17,1,-1,6.12323e-17,1311,473)">
+                                        <path d="M372.5,811C389.598,800.464 471.332,943.342 460,986C445.417,1015.17 299.583,1015.17 285,986C270.764,945.808 353.253,802.774 372.5,811Z" style="fill:rgb(239,233,255);"/>
+                                    </g>
+                                    <g id="right-border" transform="matrix(6.12323e-17,1,-1,6.12323e-17,1311,473)">
+                                        <path d="M372.5,811C392.467,803.921 474.695,946.412 460,986C443.724,1022.21 297.484,1021.76 285,986C272.945,934.826 356.617,796.256 372.5,811Z" style="fill:none;stroke:rgb(187,153,255);stroke-width:14.11px;"/>
+                                    </g>
+                                </g>
+                                <g id="left">
+                                    <g id="left-fill" transform="matrix(6.12323e-17,1,-1,6.12323e-17,1311,473)">
+                                        <path d="M372.5,811C389.598,800.464 471.332,943.342 460,986C445.417,1015.17 299.583,1015.17 285,986C270.764,945.808 353.253,802.774 372.5,811Z" style="fill:rgb(239,233,255);"/>
+                                    </g>
+                                    <g id="left-border" transform="matrix(6.12323e-17,1,-1,6.12323e-17,1311,473)">
+                                        <path d="M372.5,811C392.467,803.921 474.695,946.412 460,986C443.724,1022.21 297.484,1021.76 285,986C272.945,934.826 356.617,796.256 372.5,811Z" style="fill:none;stroke:rgb(187,153,255);stroke-width:14.11px;"/>
+                                    </g>
+                                </g>
+                                <g id="right-line-bottom" transform="matrix(-1,0,0,1,1000,0)">
+                                    <path d="M467.5,845.5C455.799,856.655 438.624,859.81 423.505,859.701" style="fill:none;stroke:rgb(187,153,255);stroke-width:10.58px;"/>
+                                </g>
+                                <g id="right-line-top" transform="matrix(-1,0,0,1,1000,0)">
+                                    <path d="M467.5,845.5C449.167,837.712 430.833,832.27 412.5,829.25" style="fill:none;stroke:rgb(187,153,255);stroke-width:10.58px;"/>
+                                </g>
+                                <path id="left-line-bottom" d="M467.5,845.5C455.799,856.655 438.624,859.81 423.505,859.701" style="fill:none;stroke:rgb(187,153,255);stroke-width:10.58px;"/>
+                                <path id="left-line-top" d="M467.5,845.5C449.167,837.712 430.833,832.27 412.5,829.25" style="fill:none;stroke:rgb(187,153,255);stroke-width:10.58px;"/>
+                                <path id="knot-fill" d="M532.5,829.25C532.5,820.281 525.219,813 516.25,813L483.75,813C474.781,813 467.5,820.281 467.5,829.25L467.5,861.75C467.5,870.719 474.781,878 483.75,878L516.25,878C525.219,878 532.5,870.719 532.5,861.75L532.5,829.25Z" style="fill:rgb(239,233,255);"/>
+                                <path id="knot-border" d="M532.5,829.25C532.5,820.281 525.219,813 516.25,813L483.75,813C474.781,813 467.5,820.281 467.5,829.25L467.5,861.75C467.5,870.719 474.781,878 483.75,878L516.25,878C525.219,878 532.5,870.719 532.5,861.75L532.5,829.25Z" style="fill:none;stroke:rgb(187,153,255);stroke-width:14.11px;"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+        </div>
+    
+        <div class="dandy-title">
+          <h1 class="masthead-title">Dandy Cat</h1>
+        </div>
       </div>
-    </nav>
+    </a>
+    
+      <nav class="masthead-nav">
+      {{ range .Site.Menus.main }}
+        {{ if .Page.Params.redirect_url }}
+          <a class="page-link" href="{{ .Page.Params.redirect_url }}">{{ .Name }}</a>
+        {{ else }}
+          <a class="page-link" href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
+        {{ end }}
+      {{ end }}
+      <a class="page-link" href="{{ "feed.xml" | absURL }}">RSS</a>
+      </nav>
 
   </div>
 
